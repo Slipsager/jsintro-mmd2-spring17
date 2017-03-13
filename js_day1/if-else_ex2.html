@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>The World Translator</h1>
+
+  <p>Write a function named helloWorld that:
+takes 1 argument, a language code (e.g. "es", "de", "en")
+returns "Hello, World" for the given language, for atleast 3 languages. It should default to returning English.
+Call that function for each of the supported languages and log the result to make sure it works.
+  </p>
+
+<strong>See output in the console</strong>
+
+  <script>
+
+  function helloWorld(langCode){
+    if (langCode == 'fr') {
+       return 'Bonjour tout le monde';
+   } else if (langCode == 'es') {
+       return 'Hola, Mundo';
+   } else {
+       return 'Hello, World';
+   }
+
+  }
+
+// function calls
+console.log( helloWorld("fr"));
+console.log( helloWorld("en"));
+console.log( helloWorld("es"));
+
+
+
+</script>
+</body>
+
+</html>

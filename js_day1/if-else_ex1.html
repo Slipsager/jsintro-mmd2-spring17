@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>What number's bigger?</h1>
+  <p> Forgot how old you are? Calculate it!</p>
+  <p>
+  Write a function named greaterNum that:
+  takes 2 arguments, both numbers.
+  returns whichever number is the greater (higher) number.
+  Call that function 2 times with different number pairs, and log the output to make sure it works (e.g. "The greater number of 5 and 10 is 10.").
+  </p>
+
+  <strong> See results in the console </strong>
+
+  <script>
+
+  function greaterNum(number1, number2){
+    var highest;
+    if (number1 > number2){ highest = number1 }
+    else if (number1 < number2) { highest = number2}
+    //Output
+    alert("The greater number of " + number1 + " and " + number2 + " is " + highest);
+
+  }
+
+// function calls
+greaterNum(10, 20);
+greaterNum(33, 20);
+greaterNum(-6, 2);
+
+
+
+
+</script>
+</body>
+
+</html>

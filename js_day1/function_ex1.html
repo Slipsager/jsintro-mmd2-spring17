@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>Why pay a fortune teller when you can just program your fortune yourself?</h1>
+  <p>
+  Write a function named tellFortune that:
+  takes 4 arguments: number of children, partner's name, geographic location, job title.
+  outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
+  Call that function 3 times with 3 different values for the arguments.
+  </p>
+
+  <script type="text/javascript">
+  /*
+  Why pay a fortune teller when you can just program your fortune yourself?
+
+  Write a function named tellFortune that:
+  takes 4 arguments: number of children, partner's name, geographic location, job title.
+  outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
+  Call that function 3 times with 3 different values for the arguments.
+  */
+
+
+  function tellFortune(numberOfChildren, partner, geographic, jobTitle){
+
+    alert ("You will be a " + jobTitle + " in " + geographic + ", and married to "+ partner +" with " + numberOfChildren +" kids." );
+  }
+
+  tellFortune( 3, "Scarlet Johanson", "Copenhagen", "musician" );
+  tellFortune( 2, "Beyounce", "New York", "DJ" );
+  tellFortune( 0, "Miss Universe", "Rom", "Designer" );
+
+  </script>
+</body>
+
+</html>

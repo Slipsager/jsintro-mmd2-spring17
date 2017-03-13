@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>The Age Calculator</h1>
+  <p> Forgot how old you are? Calculate it!</p>
+  <p>
+  Write a function named calculateAge that:
+  takes 2 arguments: birth year, current year.
+  calculates the 2 possible ages based on those years.
+  outputs the result to the screen like so: "You are either NN or NN"
+  Call the function three times with different sets of values.
+  Bonus: Figure out how to get the current year in JavaScript instead of passing it in.
+  </p>
+
+  <strong> See results in the console </strong>
+
+  <script type="text/javascript">
+  /*
+  The Age Calculato
+  Write a function named calculateAge that:
+  takes 2 arguments: birth year, current year.
+  calculates the 2 possible ages based on those years.
+  outputs the result to the screen like so: "You are either NN or NN"
+  Call the function three times with different sets of values.
+  Bonus: Figure out how to get the current year in JavaScript instead of passing it in.
+  */
+
+
+  function calculateAge(birthYear, currentYear){
+    var possibleAgeHigh = currentYear - birthYear;
+    var possibleAgeLow = currentYear - birthYear - 1;
+
+    console.log('I will be either ' + possibleAgeLow + ' or ' + possibleAgeHigh + ' in ' + currentYear);
+  }
+
+calculateAge( 1980, 2017);
+calculateAge( 1990, 2017);
+
+// Bonus
+var d = new Date();
+var n = d.getFullYear();
+
+calculateAge(1997, n);
+
+
+
+  </script>
+</body>
+
+</html>

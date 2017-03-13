@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cash register</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="register">
+      <div id="ticket">
+        <h1>Cash Register</h1>
+        <p id="error"></p>
+        <ul id="list"></ul>
+        <p>
+          Total: <span id="total-line-item">0.00 €</span>
+        </p>
+      </div>
+      <form id="entry">
+        <input type="number" id="new-item" autofocus placeholder="Value" min="0" step="0.01">
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
