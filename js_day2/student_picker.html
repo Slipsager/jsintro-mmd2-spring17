@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>Array and random</h1>
+  <p id="demo"></p>
+  <script>
+  var classA= ["Jeppe", "Thomas","Kasper","Martin","Pernille","Rasmus",
+   "Kamille","Sebastian","Tine","Anne-Louise","Alessandro","Morten","Christian",
+   "Jonathan", "Mille","Danny Devito","Tim"];
+
+  classA.sort();
+  document.write("Class A: " + classA + "<br><hr>");
+
+  studentsInClass = classA.length;
+  alert(studentsInClass);
+
+  function selectStudent(){
+    var x= Math.random() * (studentsInClass-1);
+    document.write("x : "+x+ "<br>");
+    var index = Math.floor((x) );
+    document.write("I : "+index + "<br>");
+    var student = classA.splice(index,1); //
+    document.write("Student : "+student + "<br>");
+
+  }
+
+  // select 3 students
+
+  selectStudent();
+  selectStudent();
+  selectStudent();
+
+
+
+  </script>
+</body>
+
+</html>

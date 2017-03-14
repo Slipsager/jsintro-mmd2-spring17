@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>The even/odd reporter</h1> Write a for loop that will iterate from 0 to 20.
+  For each iteration, it will check if the current number is even or odd, and report that to the screen
+  (e.g. "2 is even").
+
+  <strong>See output in the console</strong>
+
+  <script>
+
+  for (var i = 0; i < 20; i++) {
+    // i%2 displays rest
+    if (i%2 === 0)
+      console.log( i + " is even");
+    else
+      console.log( i + " is odd");
+  }
+
+  </script>
+</body>
+
+</html>

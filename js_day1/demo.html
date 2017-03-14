@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript intro example</title>
+</head>
+
+<body>
+
+<script>
+var firstName = prompt("What is your name? "); // String
+var height = prompt("What is your height? ", 180);
+
+// loop
+for (var i = 0; i < 10; i++) {
+  sayHello(firstName, i);
+}
+
+
+
+
+
+// condition
+if (height >160){
+  sayHello(firstName, height );
+}
+ else if(height <110){
+   alert("You are very small!!!!");
+ }
+
+// function definition
+function sayHello(param1, param2){
+  document.write("Hello World " + param1 +" Height :" + param2 + "<br>");
+
+}
+
+</script>
+
+
+
+
+</body>
+
+</html>
