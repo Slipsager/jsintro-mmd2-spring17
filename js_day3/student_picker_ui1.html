@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='http:fonts.googleapis.com/css?family=Andada' rel='stylesheet'>
+
+  <style>
+    .list-group {
+      padding-left: 0;
+      margin-bottom: 0px;
+    }
+
+    .container-fluid {
+      background-color: lightgrey;
+      height: 3000px;
+
+    }
+
+    .header {
+      background-color:#96897f;
+      padding: 10px;
+    }
+
+    .header p,
+    span {
+      color: white;
+    }
+
+    .header span {
+      margin-right: 20px;
+    }
+
+    h1,h2 {
+      font-family: 'Andada';
+      font-size: 40px;
+    }
+
+    input[type=text]:focus {
+      border: 1px;
+    }
+
+    input[type=text] {
+      padding-left: 25px;
+    }
+    #groups{
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="header">
+      <h1>THE GROUP MARKER PAGE</h1>
+
+
+      <script>
+        var classA = ["Jeppe", "Thomas", "Kasper", "Martin", "Pernille", "Rasmus",
+          "Kamille", "Sebastian", "Tine", "Anne-Louise", "Alessandro", "Morten", "Christian",
+          "Jonathan", "Mille", "Danny Devito", "Tim"
+        ];
+
+        var classInt = ["Johan", "Alison", "Mathilde", "Andrea", "Paul ", "Chloé", "Raphaël", "Jarek", "Eduard"];
+
+        document.write("<br>");
+        classInt.sort();
+        classA.sort();
+
+        document.write("<p>Class A students (<strong>" + classA.length + "</strong>)  : " + classA + "</p>");
+        document.write("<p>Class I students (<strong>" + classInt.length + "</strong>)  : " + classInt + "</p>");
+      </script>
+      <br>
+      <hr>
+      <form id="input">
+        <span>Which group size do you want? </span>
+        <input type="text" name="inputField" id="number" size="4" value="3 " />
+        <input type="button" onclick="getGroupSize();" value="Enter" />
+      </form>
+    </div>
+    <!-- header-->
+    <div id="groups"></div>
+
+
+    <script>
+      var text = ""; //global
+
+      function getGroupSize() {
+        // initialiser
+        document.getElementById("groups").innerHTML = " ";
+        text = "";
+
+        var classA = ["Jeppe", "Thomas", "Kasper", "Martin", "Pernille", "Rasmus",
+          "Kamille", "Sebastian", "Tine", "Anne-Louise", "Alessandro", "Morten", "Christian",
+          "Jonathan", "Mille", "Danny Devito", "Tim"
+        ];
+
+        var classInt = ["Johan", "Alison", "Mathilde", "Andrea", "Paul ", "Chloé", "Raphaël", "Jarek", "Eduard"];
+
+
+        var groupSize = document.getElementById("number").value;
+
+        selectGroups(classInt, groupSize, "Class Int");
+        selectGroups(classA, groupSize, "Class A");
+        // output result
+        document.getElementById("groups").innerHTML = text;
+      }
+
+      function selectStudent(classArray) {
+        var x = Math.random() * (classArray.length - 1);
+        //document.write("x : "+x+ "<br>");
+        var index = Math.floor((x));
+        //document.write("I : "+index + "<br>");
+        var student = classArray.splice(index, 1); //
+
+        text += ('<ul class="list-group">');
+        text += ('<li class="list-group-item">');
+        text += ("  " + student + "</li>");
+        text += ('</ul>');
+
+      }
+
+      // select students
+      function selectGroups(classArray, groupSize, className) {
+        text += ("<h2>" + className + "</h2>");
+        for (var i = 0; i < classArray.length; i++) {
+          text += ("<p>Group nr. " + (i + 1) + "</p>");
+          for (var j = 1; j <= groupSize; j++) {
+
+            selectStudent(classArray);
+          }
+
+        }
+      }
+    </script>
+  </div>
+</body>
+
+</html>

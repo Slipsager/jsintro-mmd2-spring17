@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>Group marker</h1>
+
+  <script>
+
+  var classA= ["Jeppe", "Thomas","Kasper","Martin","Pernille","Rasmus",
+   "Kamille","Sebastian","Tine","Anne-Louise","Alessandro","Morten","Christian",
+   "Jonathan", "Mille","Danny Devito","Tim"];
+
+  var classInt= ["Johan","Alison","Mathilde", "Andrea","Paul ","Chloé", "Raphaël","Jarek","Eduard"];
+
+  document.write("<br>");
+  classInt.sort();
+  classA.sort();
+
+  document.write("Class A: " + classA + " <strong>In all: "+classA.length +"</strong><hr>");
+  document.write("Class Int: " + classInt + " <strong>In all: "+classInt.length +"</strong><hr>");
+
+  var groupSize = prompt("How many students per group ", 3);
+  selectGroups(classInt, groupSize, "Class Int");
+  selectGroups(classA, groupSize, "Class A");
+
+
+  function selectStudent(classArray){
+    var x= Math.random() * (classArray.length-1);
+    //document.write("x : "+x+ "<br>");
+    var index = Math.floor((x) );
+    //document.write("I : "+index + "<br>");
+    var student = classArray.splice(index,1); //
+    document.write("Student : "+student + "<br>");
+
+  }
+
+  // select 3 students
+  function selectGroups(classArray, groupSize,className){
+      document.write("<h2>Class : " + className + "</h2>");
+      for (var i = 0; i < classArray.length; i++) {
+        document.write("<p>Group nr. " +(i+1)+ "</p>");
+        for (var j = 1; j <= groupSize; j++) {
+
+          selectStudent(classArray);
+        }
+        document.write("<hr>");
+      }
+}
+
+
+
+
+  </script>
+</body>
+
+</html>

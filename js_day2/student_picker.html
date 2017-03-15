@@ -14,18 +14,24 @@
    "Kamille","Sebastian","Tine","Anne-Louise","Alessandro","Morten","Christian",
    "Jonathan", "Mille","Danny Devito","Tim"];
 
-  classA.sort();
-  document.write("Class A: " + classA + "<br><hr>");
+  var classInt= ["Johan","Alison","Mathilde", "Andrea","Paul ","Chloé", "Raphaël","Jarek","Eduard"];
 
-  studentsInClass = classA.length;
+
+  classInt.sort();
+  document.write("Class Int: " + classInt + "<br><hr>");
+
+  studentsInClass = classInt.length;
   alert(studentsInClass);
+
+
+
 
   function selectStudent(){
     var x= Math.random() * (studentsInClass-1);
     document.write("x : "+x+ "<br>");
     var index = Math.floor((x) );
     document.write("I : "+index + "<br>");
-    var student = classA.splice(index,1); //
+    var student = classInt.splice(index,1); //
     document.write("Student : "+student + "<br>");
 
   }

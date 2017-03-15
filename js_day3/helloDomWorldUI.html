@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript intro example</title>
+</head>
+
+<body>
+  <p id="demo" onmouseover="sayHello();">Some text</p>
+
+<script >
+  function sayHello(){
+    var ref = document.getElementById("demo");
+
+    ref.innerHTML = "Hello World";
+    ref.style.color = "red";
+    ref.style.fontSize ="200px"; // css: font-size: 200px
+  }
+  
+</script>
+
+</body>
+
+</html>

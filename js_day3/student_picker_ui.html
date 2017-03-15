@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+  <h1>Group marker</h1>
+
+
+  <form id="input">
+    <input type="text" name="inputField" id="number" value="3 " />
+    <input type="button" onclick="getGroupSize();" value="Enter" />
+  </form>
+
+
+  <script>
+    var classA = ["Jeppe", "Thomas", "Kasper", "Martin", "Pernille", "Rasmus",
+      "Kamille", "Sebastian", "Tine", "Anne-Louise", "Alessandro", "Morten", "Christian",
+      "Jonathan", "Mille", "Danny Devito", "Tim"
+    ];
+
+    var classInt = ["Johan", "Alison", "Mathilde", "Andrea", "Paul ", "Chloé", "Raphaël", "Jarek", "Eduard"];
+
+    document.write("<br>");
+    classInt.sort();
+    classA.sort();
+
+    document.write("Class A: " + classA + " <strong>In all: " + classA.length + "</strong><hr>");
+    document.write("Class Int: " + classInt + " <strong>In all: " + classInt.length + "</strong><hr>");
+  </script>
+  <div id="groups"></div>
+
+
+  <script>
+    var text = ""; //global
+
+    function getGroupSize() {
+      // initialiser
+      document.getElementById("groups").innerHTML = " ";
+      text = "";
+
+      var classA = ["Jeppe", "Thomas", "Kasper", "Martin", "Pernille", "Rasmus",
+        "Kamille", "Sebastian", "Tine", "Anne-Louise", "Alessandro", "Morten", "Christian",
+        "Jonathan", "Mille", "Danny Devito", "Tim"
+      ];
+
+      var classInt = ["Johan", "Alison", "Mathilde", "Andrea", "Paul ", "Chloé", "Raphaël", "Jarek", "Eduard"];
+
+
+      var groupSize = document.getElementById("number").value;
+      alert(groupSize);
+      selectGroups(classInt, groupSize, "Class Int");
+      selectGroups(classA, groupSize, "Class A");
+      // output result
+      document.getElementById("groups").innerHTML = text;
+    }
+
+    function selectStudent(classArray) {
+      var x = Math.random() * (classArray.length - 1);
+      //document.write("x : "+x+ "<br>");
+      var index = Math.floor((x));
+      //document.write("I : "+index + "<br>");
+      var student = classArray.splice(index, 1); //
+      text += ("Student : " + student + "<br>");
+
+    }
+
+    // select 3 students
+    function selectGroups(classArray, groupSize, className) {
+      text += ("<h2>Class : " + className + "</h2>");
+      for (var i = 0; i < classArray.length; i++) {
+        text += ("<p>Group nr. " + (i + 1) + "</p>");
+        for (var j = 1; j <= groupSize; j++) {
+
+          selectStudent(classArray);
+        }
+        text += ("<hr>");
+      }
+    }
+  </script>
+</body>
+
+</html>

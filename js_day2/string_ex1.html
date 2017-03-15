@@ -10,12 +10,22 @@
   <h1>String information</h1>
 
   <script>
+  var name = "Bjarne";
+
+
   var uInput = prompt("Enter some text");
+
+  alert(uInput.length);
+  alert("first "+uInput.charAt(0));
+  alert("Last "+uInput.charAt(uInput.length-1));
+
+  
   document.writeln("The text: " + uInput + "<br />");
   document.writeln("Length : " + uInput.length + "<br />" );
 
   document.writeln("First character : " + uInput.charAt(0)+ "<br />");
-  document.writeln("Last character : " + uInput.charAt(uInput.length-1)+ "<br />");
+  document.writeln("Last character : " + uInput.charAt(uInput.length - 1 )+ "<br />");
+
   </script>
 </body>
 
