@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Javascript exercise</title>
+</head>
+
+<body>
+
+  <script>
+  // opgave a
+   var txt = "This is a text";
+   var count = 0;
+   alert(txt.length);
+   // opgave b
+   for (var i = 0; i < txt.length; i++) {
+
+     document.write(txt.charAt(i) + "<br>");
+     // opgave c
+     var x = txt.charAt(i);
+     if ( x.toUpperCase() == "T"){
+       count++;
+     }
+   }
+
+   document.write("<h1> Antal T = "+ count + "</h1>");
+
+  </script>
+</body>
+
+</html>
